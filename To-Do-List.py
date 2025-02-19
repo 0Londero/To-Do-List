@@ -9,9 +9,11 @@ task = []
 
 
 #example of variables added - temporary information
-task.append({"name":"example", "priority": "high","deadline":['2025-2-18']})
-task.append({"name":"example2", "priority": "low","deadline":['2025-2-18']})
-task.append({"name":"example3", "priority": "low","deadline":['2025-2-18']})
+task.append({"name":"example", "priority": 3,"deadline":'2025-2-15'})
+task.append({"name":"example2", "priority": 1,"deadline":'2025-2-17'})
+task.append({"name":"example3", "priority": 3,"deadline":'2025-2-27'})
+task.append({"name":"example4", "priority": 1,"deadline":'2025-2-20'})
+task.append({"name":"example5", "priority": 1,"deadline":'2025-2-22'})
 print(task)
 choice = 2
 #Function to remove the item
