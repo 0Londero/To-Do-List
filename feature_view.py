@@ -1,16 +1,16 @@
-def view():
+def view(tasks):
 
     sorted_tasks = tasks        # Default
     # Function to return the specific item
     def get_priority(task):
-        return task['priority']
+        return task['Priority']
     def get_date(task):
-        return task['date']
+        return task['Deadline']
     def get_suggestion(task):
-        return task['date'], task['priority']
+        return task['Deadline'], task['Priority']
     # If the list is empty
     if not tasks:
-        print("Nothing to see here. Go add some task first.")
+        print("Nothing to see here. Try adding some task first :).")
         return
     # Loop for a valid answer
     while True:
@@ -31,9 +31,13 @@ def view():
                 break
             elif char1 == "S":
                 sorted_tasks = sorted(tasks, key=get_suggestion)
+                if len(sorted_tasks) < 10:
+                    sorted_tasks = sorted_tasks[:len(sorted_tasks)]  # Keep all if less than 10
+                else:
+                    sorted_tasks = sorted_tasks[:10]  # Keep only top 10
                 break
             else:
                 print("Invalid choice! Please, try again.")
     # Print the list if the choice is Valid; # No sort = default list print
     for item in sorted_tasks:
-        print(f"[{item['id']}] Description: {item['description']} | Priority: {item['priority']} | Date: {item['date'].strftime('%Y-%m-%d')}")
+        print(f"Description: {item['Task']} | Priority: {item['Priority']} | Date: {item['Deadline']}")

@@ -1,20 +1,20 @@
-def delete_task(task):
+def delete_tasks(tasks):
     validation = 0
-    task_name = input("Please enter the name of the task to remove:")
+    tasks_name = input("Please enter the name of the tasks to remove:")
     # initial validation
-    for index in range(len(task)):
+    for index in range(len(tasks)):
         if validation!=1:
-            name_val = task[index]["name"]
+            name_val = tasks[index]["Task"]
             indexn2 = index
-            if task_name == name_val:
+            if tasks_name == name_val:
                 validationq = input("Are you sure you want to eliminate " + name_val + " ? (Y/N)")
                 while True:
-                    if validationq == "Y":
-                        task.pop(indexn2)
-                        print("Task " + task_name + " has been removed from the list")
+                    if validationq == "Y" or validationq == "y":
+                        tasks.pop(indexn2)
+                        print("Task " + tasks_name + " has been removed from the list")
                         break
-                    if validationq == "N":
-                        print("Task " + task_name + " hasn't been removed from the list")
+                    if validationq == "N" or validationq == "n":
+                        print("Task " + tasks_name + " hasn't been removed from the list")
                         break
                     validationq = input(
                         "Are you sure you want to eliminate " + name_val + " ? Please select a valid answer (Y/N)")
@@ -22,23 +22,22 @@ def delete_task(task):
     # when the item is not in the list
     while validation!=1:
 
-        task_name = input("Sorry the name is not in the list, please enter the name of the task to remove:")
+        tasks_name = input("Sorry the name is not in the list, please enter the name of the tasks to remove:")
 
         # Second validation it is in the list
-        for index in range(len(task)):
+        for index in range(len(tasks)):
             if validation!=1:
-                name_val = task[index]["name"]
+                name_val = tasks[index]["Task"]
                 indexn2 = int(index)
-                if task_name == name_val:
+                if tasks_name == name_val:
                     validationq = input("Are you sure you want to eliminate " + name_val + " ? (Y/N)")
                     while True:
-                        if validationq == "Y":
-                            task.pop(indexn2)
-                            print("Task " + task_name + " has been removed from the list")
+                        if validationq == "Y" or validationq == "y":
+                            tasks.pop(indexn2)
+                            print("Task " + tasks_name + " has been removed from the list")
                             break
-                        if validationq == "N":
-                            print("Task " + task_name + " hasn't been removed from the list")
+                        if validationq == "N" or validationq == "n":
+                            print("Task " + tasks_name + " hasn't been removed from the list")
                             break
                         validationq = input("Are you sure you want to eliminate " + name_val + " ? Please select a valid answer (Y/N)")
                     validation = 1
-

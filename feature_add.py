@@ -1,11 +1,5 @@
-# Initializing a global variable for saving the Task
-from logging import exception
-
-task = []
-
-#Define add new list
 import datetime
-def add_task():
+def add_task(tasks):
 
 #Task
     while True:
@@ -41,39 +35,5 @@ def add_task():
             print("\033[31mInvalid deadline. Please enter in YYYY-MM-DD format.\033[0m")
             continue
 
-    task.append({"Task" : new_task, "Priority" : priority, "Deadline" : date})
+    tasks.append({"Task" : new_task, "Priority" : priority, "Deadline" : date})
     print(f'Your task : \033[33m{new_task}\033[0m with priority : \033[33m{priority}\033[0m and deadline : \033[33m{date}\033[0m has been added to the list.')
-
-#Define view new list
-def view_tasks():
-    if task:
-        print("Your to do list :")
-        for a, b in enumerate(task, 1) :
-            print(f"{a}. {b}")
-
-    else:
-        print("Your to do list is empty.")
-
-#Ask process
-while True :
-    print()
-    print("To-Do List Application")
-    print("1. Add Task")
-    print("2. Remove Task")
-    print("3. View Tasks")
-    print("4. Exit")
-
-    try:
-        choice = int(input("Enter your choice : "))
-        if choice == 1 :
-            add_task()
-        elif choice == 3 :
-            view_tasks()
-        elif choice == 4 :
-            print("\033[33mExiting the application now. Goodbye!\033[0m")
-            break
-
-        else:
-            print("\033[31mInvalid choice. Please enter a number between 1 and 4\033[0m")
-    except ValueError:
-        print("\033[31mPlease enter a valid number.\033[0m")
