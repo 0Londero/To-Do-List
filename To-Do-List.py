@@ -50,3 +50,21 @@ def add_task():
     task.append({"Task" : new_task, "Priority" : priority, "Deadline" : date})
     print(f'Your task : \033[33m{new_task}\033[0m with priority : \033[33m{priority}\033[0m and deadline : \033[33m{date}\033[0m has been added to the list.')
 
+#Ask process
+while True :
+    print()
+    print("To-Do List Application")
+    print("1. Add Task")
+    print("2. Remove Task")
+    print("3. View Tasks")
+    print("4. Exit")
+
+    try:
+        choice = int(input("Enter your choice : "))
+        if choice == 1 :
+            add_task()
+
+        else:
+            print("\033[31mInvalid choice. Please enter a number between 1 and 4\033[0m")
+    except ValueError:
+        print("\033[31mPlease enter a valid number.\033[0m")
