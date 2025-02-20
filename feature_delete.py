@@ -1,4 +1,9 @@
 def delete_tasks(tasks):
+
+    if not tasks:
+        print("There is no task to delete. Try adding some tasks first :) ")
+        return
+
     validation = 0
     tasks_name = input("Please enter the name of the tasks to remove:")
     # initial validation
