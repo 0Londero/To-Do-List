@@ -10,7 +10,7 @@ def view(tasks):
         return task['Deadline'], task['Priority']
     # If the list is empty
     if not tasks:
-        print("Nothing to see here. Try adding some task first :).")
+        print("Nothing to see here. Try adding some task first :) ")
         return
     # Loop for a valid answer
     while True:
