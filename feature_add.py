@@ -40,3 +40,4 @@ def add_task(tasks):
 
     tasks.append({"Task" : new_task, "Priority" : priority, "Deadline" : date})
     print(f'Your task : \033[33m{new_task}\033[0m with priority : \033[33m{priority}\033[0m and deadline : \033[33m{date}\033[0m has been added to the list.')
+
