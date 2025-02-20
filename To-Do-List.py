@@ -7,4 +7,4 @@ Python.
 # Initializing a global variable for saving the Task
 task = []
 
-def Delete_Task()
+from Feature_Delete import Delete_Task
