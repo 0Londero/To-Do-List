@@ -1,6 +1,6 @@
 # 📋 Simple To-Do List
 
-This is a project created as part of the Data Science course at **Cornerstone International College** to practice list manipulation and functions in Python. In addition to basic functionalities, we included a priority system and task suggestions using basic AI logic.
+This is a project created as part of the Data Science course at **Cornerstone International College** to practice list manipulation and functions in Python. In addition to basic functionalities, we included a priority system and task suggestions.
 
 ---
 
@@ -27,8 +27,6 @@ This project helps develop skills in **list manipulation**, **functions**, and *
 - **Python** 🐍
 - List manipulation and functions
 - Conditional structures and loops
-- Basic AI algorithms
-
 ---
 
 ## 👥 Team

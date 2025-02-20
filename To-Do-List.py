@@ -1,8 +1,6 @@
-"""
-Create a simple to-do list application that allows users to add, remove, and view
-tasks. This project will help you practice working with lists and functions in
-Python.
-"""
+# Imports
+from feature_view import view
+
 
 # Initializing a global variable for saving the Task
 from logging import exception
@@ -68,3 +66,4 @@ while True :
             print("\033[31mInvalid choice. Please enter a number between 1 and 4\033[0m")
     except ValueError:
         print("\033[31mPlease enter a valid number.\033[0m")
+
